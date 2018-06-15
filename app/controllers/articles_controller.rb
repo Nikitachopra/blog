@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 #	  include Knock::Authenticable
-skip_before_action :authenticate_user!
+#skip_before_action :authenticate_user!
 
 
 	WillPaginate.per_page = 10
