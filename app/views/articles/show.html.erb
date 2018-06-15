@@ -1,0 +1,23 @@
+<p>
+	<%= image_tag @article.avatar %>
+</p>
+<p>
+	<h4><%= @article.title%></h4>
+</p>
+<p>
+	<%= @article.text%>
+</p>
+
+<h3>Comments</h3>
+<%= render @article.comments %>
+
+
+<h2>Add a comment:</h2>
+
+<%= render 'comments/form' %>
+
+
+
+<%= link_to "Edit", edit_article_path(@article) %>
+<%= link_to "Destroy", article_path(@article), method: :delete, data: {confirm: 'Are you sure?' } %>
+<%= link_to "Back", articles_path %>
