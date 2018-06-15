@@ -27,7 +27,7 @@ class ArticlesController < ApplicationController
 
 	def create
 	  @article = Article.new(article_params)
-	  @article.user = current_user
+	 # @article.user = current_user
 	  saved = @article.save
 	  respond_to do |format|
 		  format.html { 
@@ -66,7 +66,8 @@ class ArticlesController < ApplicationController
 	private
 
 	def article_params
-		params.require(:article).permit(:title, :text, :avatar)
+		byebug
+		params.require(:article).permit(:title, :text, :avatar, :user_id)
 	end
 
 end
