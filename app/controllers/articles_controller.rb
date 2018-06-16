@@ -32,7 +32,7 @@ class ArticlesController < ApplicationController
 	  respond_to do |format|
 		  format.html { 
 		  	if saved
-			  	ArticleMailer.article_posted_email(@article_id).deliver_later
+			  	ArticleMailer.article_posted_email(@article.id).deliver_now
 			  	redirect_to @article
 			  else
 			  	render :new

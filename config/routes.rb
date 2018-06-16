@@ -1,4 +1,4 @@
-require "resque_web"
+
 
 Rails.application.routes.draw do
   post 'user_token' => 'user_token#create'
@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 	
 	
   
-	mount ResqueWeb::Engine => "/resque_web"
+	
   resources :articles do
   	resources :comments
   end

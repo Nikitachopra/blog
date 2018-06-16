@@ -32,8 +32,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'resque-web', require: 'resque_web'
-gem 'resque'
+
 gem 'devise'
 gem 'jquery'
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
